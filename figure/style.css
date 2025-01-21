@@ -1,0 +1,62 @@
+body {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 150px;
+}
+
+.figure-1, .figure-2, .figure-3, .figure-4 {
+  width: 290px;
+  height: 290px;
+  background: repeating-linear-gradient(45deg, #c471ed, #c471ed 10px, #000 10px, #000 20px);
+  margin: 23px;
+  border-radius: 50%;
+  animation: rotateAnimation 5s infinite linear, colorChange 4s infinite alternate, scalePulse 2s infinite ease-in-out;
+}
+
+.figure-1 {
+  animation-delay: 0s;
+}
+
+.figure-2 {
+  animation-delay: 1s;
+}
+
+.figure-3 {
+  animation-delay: 2s;
+}
+
+.figure-4 {
+  animation-delay: 3s;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background: repeating-linear-gradient(45deg, #c471ed, #c471ed 10px, #000 10px, #000 20px);
+  }
+  50% {
+    background: repeating-linear-gradient(45deg, #00ff99, #00ff99 10px, #000 10px, #000 20px);
+  }
+  100% {
+    background: repeating-linear-gradient(45deg, #ff5722, #ff5722 10px, #000 10px, #000 20px);
+  }
+}
+
+@keyframes scalePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
